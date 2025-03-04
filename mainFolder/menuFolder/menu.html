@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../cssFolder/homeStyles.css"> 
+    <script>
+        function filterMenu(category) {
+            $(".menu-item").each(function() {
+                if (category === "all" || $(this).data("category") === category) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        }
+    </script>
+    <style>
+       .menu-container {
+            text-align: center;
+            padding: 20px;
+        }
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .menu-item {
+            width: 280px;
+            background-color: #3B1E12;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .filter-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .filter-buttons .btn {
+            background-color: var(--brown-dark);
+            color: var(--white);
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 18px;
+            font-weight: 550;
+            transition: background 0.3s;
+        }
+        .filter-buttons .btn:hover {
+            background-color: var(--brown-medium);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-custom">
+        <div class="navbar-header">
+            <img src="../globalImages/companylogo.png" alt="Mi Dulce Rueshe Logo" class="logo">
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="../homeFolder/home.html">Home</a></li>
+            <li><a href="../aboutUsFolder/aboutUs.html">About Us</a></li>
+            <li class="active"><a href="../menuFolder/menu.html">Menu</a></li>
+            <li><a href="../onlineOrderingFolder/onlineOrdering.html">Online Ordering</a></li>
+            <li><a href="../specialEventsFolder/specialEvents.html">Event Catering</a></li>
+            <li><a href="../galleryFolder/gallery.html">Gallery & Testimonials</a></li>
+            <li><a href="../blogFolder/blog.html">Blog</a></li>
+            <li><a href="../contactFolder/contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <div class="menu-container">
+        <h1 class="section-title">OUR MENU</h1>
+        <div class="filter-buttons">
+            <button class="btn" onclick="filterMenu('all')">All</button>
+            <button class="btn" onclick="filterMenu('cakes')">Cakes</button>
+            <button class="btn" onclick="filterMenu('cupcakes')">Cupcakes</button>
+            <button class="btn" onclick="filterMenu('brownies')">Brownies</button>
+            <button class="btn" onclick="filterMenu('muffins')">Muffins</button>
+            <button class="btn" onclick="filterMenu('custom')">Custom Orders</button>
+        </div>
+        <div class="menu-items">
+            <div class="menu-item" data-category="cakes">
+                <img src="../globalImages/1.jpg" alt="MDR Signature Chocolate Cake">
+                <h3>MDR Signature Chocolate Cake</h3>
+                <p>Rich and moist chocolate cake with rich creamy ganache.</p>
+                <p><strong>Price: ₱650 </strong></p>
+            </div>
+            <div class="menu-item" data-category="cupcakes">
+                <img src="../globalImages/2.jpg" alt="MDR Signature Chocolate Cupcake">
+                <h3>MDR Signature Chocolate Cupcake</h3>
+                <p>Light and fluffy chocolate cupcake with rich and creamy ganache.</p>
+                <p><strong>Price: ₱450 [6] | ₱750 [12]</strong></p>
+            </div>
+            <div class="menu-item" data-category="brownies">
+                <img src="../globalImages/3.jpg" alt="Brownie">
+                <h3>Fudgy Brownie</h3>
+                <p>Fudgy and delicious chocolate brownie with walnuts.</p>
+                <p><strong>Price: ₱450 [6] | ₱750 [12]</strong></p>
+            </div>
+            <div class="menu-item" data-category="brownies">
+                <img src="../globalImages/9.jpg" alt="Brownie">
+                <h3>Oreo Brownie</h3>
+                <p>Fudgy and delicious chocolate brownie with oreos.</p>
+                <p><strong>Price: ₱500 [6] | ₱850 [12]</strong></p>
+            </div>
+            <div class="menu-item" data-category="brownies">
+                <img src="../globalImages/4.jpg" alt="Brownie">
+                <h3>Smores Brownie</h3>
+                <p>Fudgy and delicious chocolate brownie with graham crumbs, marshmallow, and chocolate drizzle.</p>
+                <p><strong>Price: ₱500 [6] | ₱850 [12]</strong></p>
+            </div>
+            <div class="menu-item" data-category="muffins">
+                <img src="../globalImages/5.jpg" alt="Muffin">
+                <h3>Banana Muffin</h3>
+                <p>Soft and moist muffin filled with bananas.</p>
+                <p><strong>Price: ₱400 [6] | ₱650 [12]</strong></p>
+            </div>
+            <div class="menu-item" data-category="muffins">
+                <img src="../globalImages/6.jpg" alt="Muffin">
+                <h3>Banana Chocolate Chip Muffin</h3>
+                <p>Soft and moist muffin filled with bananas and chocolate chips.</p>
+                <p><strong>Price: ₱400 [6] | ₱650 [12]</strong></p>
+            </div>
+            <div class="menu-item" data-category="muffins">
+                <img src="../globalImages/7.jpg" alt="Muffin">
+                <h3>Nutella Banana Muffin</h3>
+                <p>Soft and moist muffin filled with Nutella.</p>
+                <p><strong>Price: ₱450 [6] | ₱700 [12]</strong></p>
+            </div>
+            <div class="menu-item" data-category="cupcakes">
+                <img src="../globalImages/8.jpg" alt="Muffin">
+                <h3>Brazo de Mercedes Cupcakes</h3>
+                <p>Pillowy meringue filled with a very rich custard.</p>
+                <p><strong>Price: ₱500 [6] | ₱900 [12]</strong></p>
+            </div>
+            <div class="menu-item" data-category="custom">
+                <img src="../globalImages/10.jpg" alt="Custom Cake">
+                <h3>Custom Cake 1</h3>
+                <p>6-inch diameter x 5-inch height | Edible</p>
+                <p><strong>Price: ₱7,500</strong></p>
+            </div>
+            <div class="menu-item" data-category="custom">
+                <img src="../globalImages/10.jpg" alt="Custom Cake">
+                <h3>Custom Cake 2</h3>
+                <p>6-inch diameter x 5-inch height | Non-Edible</p>
+                <p><strong>Price: ₱5,200</strong></p>
+            </div>
+            <div class="menu-item" data-category="custom">
+                <img src="../globalImages/10.jpg" alt="Custom Cake">
+                <h3>Custom Cake 3</h3>
+                <p>8-inch diameter x 5-inch height | Edible</p>
+                <p><strong>Price: ₱8,500</strong></p>
+            </div>
+            <div class="menu-item" data-category="custom">
+                <img src="../globalImages/10.jpg" alt="Custom Cake">
+                <h3>Custom Cake 4</h3>
+                <p>8-inch diameter x 5-inch height | Non-Edible</p>
+                <p><strong>Price: ₱6,200</strong></p>
+            </div>
+            <div class="menu-item" data-category="custom">
+                <img src="../globalImages/11.jpg" alt="Custom Cake">
+                <h3>Custom Cake 5</h3>
+                <p>2-tier with 6-inch and 8-inch cakes| Top Edible</p>
+                <p><strong>Price: ₱12,500</strong></p>
+            </div>
+            <div class="menu-item" data-category="custom">
+                <img src="../globalImages/11.jpg" alt="Custom Cake">
+                <h3>Custom Cake 6</h3>
+                <p>2-tier with 6-inch and 8-inch cakes| Bottom Edible</p>
+                <p><strong>Price: ₱13,520</strong></p>
+            </div>
+            <div class="menu-item" data-category="custom">
+                <img src="../globalImages/11.jpg" alt="Custom Cake">
+                <h3>Custom Cake 7</h3>
+                <p>2-tier with 6-inch and 8-inch cakes| Non-Edible</p>
+                <p><strong>Price: ₱11,500</strong></p>
+            </div>
+            <div class="menu-item" data-category="custom">
+                <img src="../globalImages/10.jpg" alt="Custom Cake">
+                <h3>Custom Cake 8</h3>
+                <p>8-inch with 30 cupcakes| Edible</p>
+                <p><strong>Price: ₱7,500</strong></p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <h4>Mi Dulce Rueshe</h4>
+        <p>Website Developed By: Johann Aguna, Marla Canlas, Jan Bautista, Dominique Gorre</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/midulcerueshe/" target="_blank">
+                <img src="../globalImages/companylogo.png" alt="Facebook Logo" class="footer-logo">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
+

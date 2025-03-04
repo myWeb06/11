@@ -1,0 +1,65 @@
+body {
+    background-color: #4B2E1E;
+    font-family: 'Georgia', serif;
+    color: #EED3B3;
+}
+.navbar-custom {
+    background-color: #3B1E12;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.navbar-header {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    height: 50px;
+}
+.nav > li > a {
+    color: #EED3B3 !important;
+}
+.nav > li > a:hover {
+    color: #D1A77A !important;
+}
+.jumbotron {
+    background: url('../globalImages/cozy-bakery.jpg') no-repeat center center;
+    background-size: cover;
+    background-image: url('../globalImages/homebg.jpg');
+    color: #EED3B3;
+    text-shadow: 2px 2px 4px #3B1E12;
+    padding: 100px 20px;
+    margin: 0px;
+}
+.btn-primary {
+    background-color: #8B5E3C;
+    border: none;
+
+}
+.btn-primary:hover {
+    background-color: #6B3F2B;
+}
+.bg-warning {
+    background-color: #1f120f;
+    padding-top: 1px;
+    padding-bottom: 2px;
+}
+footer {
+    background-color: #3B1E12;
+    color: #EED3B3;
+    padding: 15px;
+    text-align: center;
+}
+.footer-logo {
+    width: 200px;
+    height: 70px;
+    margin: 10px;
+}
+
+img{
+    height: 300px;
+    width: 150px;
+}
+

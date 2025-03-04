@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap stuff -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../cssFolder/homeStyles.css"> <!--css here-->
+</head>
+<body>
+	<nav class="navbar navbar-custom"> <!-- copy paste navbar in other pages -->
+		<div class="container-fluid"> <!-- class="navbar navbar-custom" can be edited in css-->
+			<div class="navbar-header"> <!-- to go to parent folder: ../targetFile.html | to go to subfolder: subfoldername/targetFile.html -->
+				<a class="navbar-brand" href="../homeFolder/home.html">Mi Dulce Rueshe</a> <!-- navbar brand is central brand name of website-->
+				
+			</div>
+			<ul class="nav navbar-nav">
+				<li ><a href="../homeFolder/home.html">Home</a></li> <!-- class active means this is the page the user is currently on, to highlight in the navbar-->
+				<li><a href="../aboutUsFolder/aboutUs.html">About Us</a></li>
+				<li><a href="../menuFolder/menu.html">Menu</a></li>
+				<li class="active"><a href="../onlineOrderingFolder/onlineOrdering.html">Online Ordering</a></li>
+				<li><a href="../specialEventsFolder/specialEvents.html">Event Catering</a></li> 
+				<li><a href="../galleryFolder/gallery.html">Gallery & Testimonials</a></li>
+				<li><a href="../blogFolder/blog.html">Blog</a></li>
+				<li><a href="../contactFolder/contact.html">Contact Us</a></li> <!-- copy paste li to /li for more pages -->
+			</ul>
+			<img src="../globalImages/companylogo.png" alt="Mi Dulce Rueshe Logo" class="logo">
+		</div>
+	</nav>
+<!-- begin content here -->	
+    <div class="container">
+        <form action="drpgorre@mymail.mapua.edu.ph" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Cake Selection</legend>
+                <label for="cake-size">Select Cake Size:</label>
+                <select id="cake-size" name="cake-size" required>
+                    <option value="" selected disabled>Select a cake size</option>
+                    <option value="6-edible">6" x 5" Edible - Php 7500</option>
+                    <option value="6-non-edible">6" x 5" Non-Edible - Php 5200</option>
+                    <option value="8-edible">8" x 5" Edible - Php 8500</option>
+                    <option value="8-non-edible">8" x 5" Non-Edible - Php 6200</option>
+                    <option value="2tier-top-edible">2-Tier (6"+8") Top Edible - Php 12500</option>
+                    <option value="2tier-bottom-edible">2-Tier (6"+8") Bottom Edible - Php 13520</option>
+                    <option value="2tier-non-edible">2-Tier (6"+8") Non-Edible - Php 11500</option>
+                    <option value="cupcakes">30 Cupcakes - Php 7500</option>
+                </select><br><br>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Customization Options</legend>
+                <p>Additional Customization:</p>
+                <input type="checkbox" id="fondant" name="customization" value="fondant">
+                <label for="fondant">Fondant Decorations</label><br>
+                
+                <input type="checkbox" id="personalized" name="customization" value="personalized">
+                <label for="personalized">Personalized Message</label><br>
+                
+                <input type="checkbox" id="theme" name="customization" value="theme">
+                <label for="theme">Themed Cake Design</label><br><br>
+
+                <label for="message">Personalized Message (if applicable):</label>
+                <input type="text" id="message" name="message"><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Shipping Information</legend>
+                <label for="address">Delivery Address:</label><br>
+                <textarea id="address" name="address" rows="3" cols="50" required></textarea><br><br>
+
+                <label for="shipping-method">Select Delivery Method:</label>
+                <select id="shipping-method" name="shipping-method" required>
+                    <option value="" selected disabled>Select a delivery method</option>
+                    <option value="standard">Standard Delivery (5-7 days)</option>
+                    <option value="express">Express Delivery (2-3 days)</option>
+                    <option value="pickup">Pickup from Store</option>
+                </select><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Comments</legend>
+                <label for="preferences">Special Requests:</label><br>
+                <textarea id="preferences" name="preferences" rows="3" cols="50"></textarea><br><br>
+            </fieldset>
+
+            <button type="submit">Submit Order</button>
+            <button type="reset">Reset Form</button>
+        </form>
+    </div>
+
+<!-- footer css in footer tag-->
+	<footer>
+		<h4 class="text-center">Mi Dulce Rueshe</h4>
+		<p>Website Developed By: Johann Aguna, Marla Canlas, Jan Bautista, Dominique Gorre</p>
+		<div class="social-icons">
+			<a href="https://www.facebook.com/midulcerueshe/" target="_blank">
+				<img src="../globalImages/facebooklogo.png" alt="Facebook Logo" class="footer-logo">
+			</a>
+		</div>
+	</footer>
+</body>
+</html>
